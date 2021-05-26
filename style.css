@@ -1,3 +1,4 @@
+@import url(header.css);
 * {
   box-sizing: border-box;
   margin: 0;
@@ -39,6 +40,10 @@ button:hover {
 }
 .toggle {
   display: none;
+}
+
+.toggle:hover {
+  cursor: pointer;
 }
 
 .toggle a {
@@ -226,6 +231,8 @@ article {
   border: none;
   border-bottom: 1px solid black;
   height: 40px;
+  padding: 0 10px;
+  outline: none;
 }
 .tourdate .container {
   justify-content: space-between;
@@ -293,6 +300,8 @@ article {
 .contact ul li input {
   width: 100%;
   display: block;
+  outline: none;
+  padding: 0 10px;
 }
 
 .contact li i {

@@ -1,12 +1,9 @@
-const menu = document.querySelector(".toggle");
-const navbar = document.querySelector(".navbar");
-var t = true;
-menu.addEventListener("click", () => {
-  if (t) {
-    t = false;
-    navbar.classList.toggle("on");
-  } else {
-    t = true;
-    navbar.classList.remove("on");
-  }
+const toggle = document.querySelector(".toggle");
+const nav = document.querySelector("ul");
+const menu = document.querySelector(".fa-bars");
+const close = document.querySelector(".fa-times");
+console.log(nav);
+toggle.addEventListener("click", function () {
+  nav.classList.toggle("enable");
+  toggle.classList.toggle("enable");
 });
