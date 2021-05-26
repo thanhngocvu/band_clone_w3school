@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+      integrity="sha512-iBBXm8fW90+nuLcSKlbmrPcLa0OT92xO1BIsZ+ywDWZCvqsWgccV3gFoRBv0z+8dLJgyAHIhR35VZc2oM/gI1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      min-height: 100vh;
+      width: 100%;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color: #2222;
+      position: relative;
+      padding: 0 3rem;
+      z-index: 99;
+    }
+
+    header * {
+      /* border: 1px solid black; */
+    }
+    .navbar {
+      position: absolute;
+      display: block;
+      top: 70%;
+      width: 100%;
+      left: 0;
+      right: 0;
+      z-index: 1;
+    }
+
+    .active {
+      display: block;
+    }
+
+    .navbar ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      background-color: #333;
+    }
+
+    .navbar ul li {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  </style>
+  <body>
+    <header>
+      <div class="logo">LOGO</div>
+      <div class="menu"><i class="fas fa-bars"></i></div>
+      <div class="navbar">
+        <ul>
+          <li><span>item</span></li>
+          <li><span>item</span></li>
+          <li><span>item</span></li>
+          <li><span>item</span></li>
+        </ul>
+      </div>
+    </header>
+  </body>
+  <script>
+    const menu = document.querySelector(".menu");
+    console.log(menu);
+    const navbar = document.querySelector(".navbar");
+    var x = true;
+    menu.addEventListener("click", () => {
+      if (x) {
+        navbar.classList.toggle("active");
+        x = false;
+      } else {
+        navbar.classList.remove("active");
+        x = true;
+      }
+    });
+  </script>
+</html>
